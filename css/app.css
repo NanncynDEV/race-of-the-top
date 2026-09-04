@@ -1,0 +1,69 @@
+/* Reglas */
+* {
+margin:0;
+padding: 0;
+box-sizing: border-box;
+border: none;
+font family: 'Raleway', sans-serif;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+body {
+    font-size: 1.6rem; /* 16px */
+    line-height: 1.5;
+    font-family: 'Raleway', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+img {
+    width: 100%;
+    display : block;
+
+}
+
+h1,h2, h3{
+    font-family: "playfair", sans-serif;
+
+}
+.hero-image {
+    min-height: 40rem;
+    background-image: url("../Img/principal.jpg");
+    background-repeat: no-repeat;
+    background-position: 100% 90%;
+    background-size: cover;
+}
+.hero-image div{
+    min-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000006e;
+    color:white;
+    font-size: 3rem;
+}
+
+.hero-image div h2{
+    font-size: 4rem; 
+}
+.btn-success{
+    background-color:greenyellow !important;
+    font-weight:lighter;
+    border-radius: 0;
+   
+}
+.btn-success:hover{
+    background-color: chartreuse !important;
+    color:black;
+}
+
+.text-colorazul{
+    color: rgb(65, 65, 249);
+    font-size: 3rem;
+    
+}
+.fondo-categorias{
+    background-color: rgba(211, 211, 211, 0.578);
+}
+
