@@ -3,94 +3,481 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Race of the Top 2026 | Gracias</title>
+  <title>Race To The Top 2026 | Registro recibido</title>
 
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/app.css">
-  <link rel="stylesheet" href="./css/registro.css">
+
+  <style>
+    :root{
+      --rtt-wine:#37040f;
+      --rtt-wine-2:#500617;
+      --rtt-ink:#252525;
+      --rtt-muted:#777;
+      --rtt-soft:#f7f4f5;
+      --rtt-line:#e5dde0;
+      --rtt-white:#fff;
+    }
+
+    body{
+      margin:0;
+      background:#fff;
+      color:var(--rtt-ink);
+    }
+
+    /* HERO DE CONFIRMACIÓN */
+    .thanks-hero{
+      min-height:72vh;
+      display:flex;
+      align-items:center;
+      padding:10rem 0 6rem;
+      background:var(--rtt-wine);
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .thanks-hero::after{
+      content:"";
+      position:absolute;
+      width:520px;
+      height:520px;
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:50%;
+      right:-120px;
+      bottom:-220px;
+    }
+
+    .thanks-kicker{
+      margin:0 0 1.25rem;
+      text-transform:uppercase;
+      letter-spacing:.18rem;
+      font-size:.76rem;
+      font-weight:800;
+      color:rgba(255,255,255,.58);
+    }
+
+    .thanks-check{
+      width:70px;
+      height:70px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border:1px solid rgba(255,255,255,.45);
+      border-radius:50%;
+      font-size:2rem;
+      margin-bottom:1.8rem;
+    }
+
+    .thanks-title{
+      margin:0;
+      max-width:850px;
+      font-size:clamp(4rem,8vw,7.4rem);
+      line-height:.88;
+      letter-spacing:-.055em;
+      font-weight:900;
+    }
+
+    .thanks-copy{
+      margin-top:2rem;
+      max-width:650px;
+      font-size:1.1rem;
+      line-height:1.7;
+      color:rgba(255,255,255,.72);
+    }
+
+    .thanks-meta{
+      border-top:1px solid rgba(255,255,255,.22);
+      padding-top:1.5rem;
+    }
+
+    .thanks-meta span,
+    .thanks-meta strong,
+    .thanks-meta small{
+      display:block;
+    }
+
+    .thanks-meta span{
+      color:rgba(255,255,255,.52);
+      text-transform:uppercase;
+      letter-spacing:.08rem;
+      font-size:.73rem;
+      font-weight:800;
+    }
+
+    .thanks-meta strong{
+      margin-top:.65rem;
+      font-size:2rem;
+    }
+
+    .thanks-meta small{
+      margin-top:.3rem;
+      color:rgba(255,255,255,.65);
+    }
+
+    /* SIGUIENTE ETAPA */
+    .thanks-details{
+      padding:6.5rem 0;
+      background:#fff;
+    }
+
+    .thanks-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr);
+      gap:5rem;
+      align-items:start;
+    }
+
+    .thanks-number{
+      color:var(--rtt-wine);
+      font-size:3.5rem;
+      line-height:.9;
+      font-weight:900;
+      letter-spacing:-.06em;
+    }
+
+    .thanks-section-kicker{
+      margin:.4rem 0 .4rem;
+      color:var(--rtt-wine);
+      text-transform:uppercase;
+      letter-spacing:.12rem;
+      font-size:.72rem;
+      font-weight:800;
+    }
+
+    .thanks-details h2{
+      margin:0;
+      font-size:clamp(2.6rem,4vw,4.3rem);
+      line-height:.95;
+      letter-spacing:-.045em;
+      font-weight:900;
+    }
+
+    .thanks-details .lead-copy{
+      margin-top:1.5rem;
+      max-width:680px;
+      color:var(--rtt-muted);
+      font-size:1.02rem;
+      line-height:1.75;
+    }
+
+    .next-card{
+      margin-top:2.5rem;
+      border:1px solid var(--rtt-line);
+      background:#fff;
+    }
+
+    .next-row{
+      display:grid;
+      grid-template-columns:80px 1fr;
+      gap:1.2rem;
+      padding:1.5rem;
+      align-items:start;
+    }
+
+    .next-row + .next-row{
+      border-top:1px solid var(--rtt-line);
+    }
+
+    .next-row b{
+      color:var(--rtt-wine);
+      font-size:1.45rem;
+      line-height:1;
+    }
+
+    .next-row strong{
+      display:block;
+      margin-bottom:.25rem;
+      font-size:1rem;
+    }
+
+    .next-row p{
+      margin:0;
+      color:var(--rtt-muted);
+      line-height:1.55;
+      font-size:.9rem;
+    }
+
+    .access-panel{
+      background:var(--rtt-soft);
+      padding:2.2rem;
+      position:sticky;
+      top:110px;
+    }
+
+    .access-panel .tag{
+      display:block;
+      color:var(--rtt-wine);
+      text-transform:uppercase;
+      letter-spacing:.1rem;
+      font-size:.7rem;
+      font-weight:900;
+    }
+
+    .access-panel h3{
+      margin:.65rem 0 1rem;
+      font-size:2rem;
+      line-height:1;
+      letter-spacing:-.04em;
+    }
+
+    .access-panel p{
+      color:var(--rtt-muted);
+      line-height:1.65;
+      margin-bottom:1.8rem;
+    }
+
+    .access-status{
+      padding:1.25rem;
+      border-left:4px solid var(--rtt-wine);
+      background:#fff;
+      margin-bottom:1.5rem;
+    }
+
+    .access-status small{
+      display:block;
+      color:var(--rtt-muted);
+      font-size:.78rem;
+      line-height:1.5;
+    }
+
+    .thanks-actions{
+      display:grid;
+      gap:.8rem;
+    }
+
+    .thanks-btn{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      text-decoration:none;
+      padding:1rem 1.1rem;
+      font-weight:800;
+      transition:.2s ease;
+    }
+
+    .thanks-btn-primary{
+      background:var(--rtt-wine);
+      color:#fff;
+    }
+
+    .thanks-btn-primary:hover{
+      background:var(--rtt-wine-2);
+      color:#fff;
+    }
+
+    .thanks-btn-secondary{
+      border:1px solid var(--rtt-wine);
+      color:var(--rtt-wine);
+      background:#fff;
+    }
+
+    .thanks-btn-secondary:hover{
+      background:var(--rtt-wine);
+      color:#fff;
+    }
+
+    @media (max-width:991.98px){
+      .thanks-grid{
+        grid-template-columns:1fr;
+        gap:3rem;
+      }
+
+      .access-panel{
+        position:static;
+      }
+    }
+
+    @media (max-width:767.98px){
+      .thanks-hero{
+        min-height:auto;
+        padding:8rem 0 4.5rem;
+      }
+
+      .thanks-title{
+        font-size:clamp(3.2rem,15vw,5rem);
+      }
+
+      .thanks-details{
+        padding:4.5rem 0;
+      }
+
+      .next-row{
+        grid-template-columns:55px 1fr;
+      }
+    }
+  </style>
 </head>
 
-<body class="thanks-page">
+<body>
 
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top event-navbar" aria-label="Navegación principal">
     <div class="container">
-
-      <a class="event-brand" href="index.html#inicio" aria-label="Race of the Top 2026 - Inicio">
-        <span class="brand-mark">RT</span>
-        <span class="brand-copy">
-          <strong>Race of the Top</strong>
-          <small>Colima · 2026</small>
-        </span>
+      <a class="event-brand" href="index.html#inicio">
+        <img src="img/R4TW.png" alt="Race To The Top" style="height:44px;width:auto;object-fit:contain;">
       </a>
 
       <div class="ms-auto">
         <a class="btn btn-light nav-register" href="index.html">Volver al inicio</a>
       </div>
-
     </div>
   </nav>
 </header>
 
-<main class="thanks-main">
-  <div class="thanks-orbit thanks-orbit-one" aria-hidden="true"></div>
-  <div class="thanks-orbit thanks-orbit-two" aria-hidden="true"></div>
+<main>
 
-  <div class="container position-relative">
-    <div class="thanks-card">
-
-      <div class="thanks-mark" aria-hidden="true">
-        <span>✓</span>
-      </div>
-
-      <p class="thanks-kicker">Race of the Top 2026</p>
-      <h1>¡Gracias por registrarte!</h1>
-
-      <p class="thanks-lead">
-        Tu solicitud de registro fue recibida correctamente.
-      </p>
-
-      <div class="thanks-event-data">
-        <div>
-          <span>Fechas</span>
-          <strong>22 y 23 de octubre de 2026</strong>
+  <section class="thanks-hero">
+    <div class="container position-relative" style="z-index:2;">
+      <div class="row align-items-end g-5">
+        <div class="col-12 col-lg-8">
+          <p class="thanks-kicker">Race To The Top 2026 · Registro</p>
+          <div class="thanks-check" aria-hidden="true">✓</div>
+          <h1 class="thanks-title">¡Registro<br>recibido!</h1>
+          <p class="thanks-copy">
+            Tu solicitud fue recibida correctamente. Conserva esta página como referencia
+            mientras se habilita la etapa final de confirmación y acceso.
+          </p>
         </div>
 
-        <div>
-          <span>Sede</span>
-          <strong>Allegra, Centro de Convenciones</strong>
-        </div>
-      </div>
-
-      <div class="thanks-placeholder">
-        <span class="thanks-placeholder-label">Siguiente etapa</span>
-        <h2>Tu acceso quedará aquí</h2>
-        <p>
-          Cuando conectemos el registro con la base de datos, esta pantalla mostrará
-          el folio único y el código QR asignados al participante.
-        </p>
-
-        <div class="thanks-pass">
-          <div>
-            <small>Folio</small>
-            <strong>ROTT26-0000</strong>
+        <div class="col-12 col-lg-4">
+          <div class="text-center mb-4">
+            <img src="img/GRÁFICOS-14.png" alt="" style="max-width:100%;width:auto;max-height:360px;object-fit:contain;">
           </div>
-          <div class="thanks-qr" aria-hidden="true">QR</div>
+          <div class="thanks-meta">
+            <span>Nos vemos</span>
+            <strong>22 y 23 de octubre</strong>
+            <small>Allegra, Centro de Convenciones · Colima</small>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="thanks-actions">
-        <a href="index.html" class="btn btn-light btn-lg px-5">Volver al inicio</a>
-        <a href="index.html#conferencias" class="btn btn-outline-light btn-lg px-5">Ver programa</a>
+  <section class="thanks-details">
+    <div class="container">
+      <div class="thanks-grid">
+
+        <div>
+          <div class="d-grid" style="grid-template-columns:80px 1fr;gap:1rem;">
+            <span class="thanks-number">01</span>
+            <div>
+              <p class="thanks-section-kicker">Siguiente etapa</p>
+              <h2>Tu acceso se generará aquí.</h2>
+            </div>
+          </div>
+
+          <p class="lead-copy">
+            Esta pantalla ya está preparada para mostrar la confirmación definitiva
+            del participante cuando conectemos el registro con la base de datos.
+          </p>
+
+          <div class="next-card">
+            <div class="next-row">
+              <b>01</b>
+              <div>
+                <strong>Registro recibido</strong>
+                <p>La solicitud de participación fue capturada desde el formulario.</p>
+              </div>
+            </div>
+
+            <div class="next-row">
+              <b>02</b>
+              <div>
+                <strong>Generación de folio</strong>
+                <p>El folio único se mostrará cuando la aplicación quede conectada al backend.</p>
+              </div>
+            </div>
+
+            <div class="next-row">
+              <b>03</b>
+              <div>
+                <strong>Código de acceso</strong>
+                <p>El código QR se asociará al folio del participante sin mostrar datos personales.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="access-panel">
+          <div class="text-center mb-4">
+            <img src="img/LOGO VERTICAL.png" alt="Race To The Top Technology Week" style="max-width:170px;width:100%;height:auto;">
+          </div>
+          <span class="tag">Confirmación</span>
+          <h3>Tu lugar está en proceso de registro</h3>
+          <p>
+            Por ahora este prototipo confirma la recepción del formulario.
+            No mostramos folios ni códigos ficticios para evitar confusiones.
+          </p>
+
+          <div class="access-status">
+            <strong>Estado actual</strong>
+            <small>Solicitud recibida · Integración con base de datos pendiente.</small>
+          </div>
+
+          <div class="thanks-actions">
+            <a href="index.html" class="thanks-btn thanks-btn-primary">
+              <span>Volver al inicio</span><span>→</span>
+            </a>
+
+            <a href="index.html#conferencias" class="thanks-btn thanks-btn-secondary">
+              <span>Ver programa</span><span>→</span>
+            </a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="container-fluid bg-dark text-white pt-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-12 col-md-4 text-center">
+        <h3 class="h5">Sobre nosotros</h3>
+        <a href="index.html#evento" class="text-white text-decoration-none">
+          ¿Qué es Race To The Top?
+        </a>
+      </div>
+
+      <div class="col-12 col-md-4 text-center">
+        <h3 class="h5">Explora</h3>
+        <p class="mb-1">
+          <a href="index.html#conferencias" class="text-white text-decoration-none">Conferencias</a>
+        </p>
+        <p class="mb-1">
+          <a href="index.html#talleres" class="text-white text-decoration-none">Talleres</a>
+        </p>
+        <p class="mb-0">
+          <a href="index.html#premiacion" class="text-white text-decoration-none">Premiación</a>
+        </p>
+      </div>
+
+      <div class="col-12 col-md-4 text-center">
+        <h3 class="h5">Evento</h3>
+        <p class="mb-1">22 y 23 de octubre de 2026</p>
+        <p class="mb-0">Allegra, Centro de Convenciones</p>
       </div>
 
     </div>
   </div>
-</main>
 
-<footer class="container-fluid bg-dark text-white py-3">
-  <div class="container text-center">
-    <p class="mb-0">© 2026 Race of the Top · Todos los derechos reservados</p>
+  <div class="container mt-4 pb-3">
+    <div class="row g-4 align-items-center justify-content-center text-center">
+      <div class="col-12 col-md-5">
+        <img src="img/LOGO CECYTCOL.png" alt="CECYTCOL" style="max-height:68px;max-width:100%;width:auto;">
+      </div>
+      <div class="col-12 col-md-5">
+        <img src="img/LOGO SEDECO.png" alt="Secretaría de Desarrollo Económico" style="max-height:76px;max-width:100%;width:auto;">
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center py-3 mt-4 border-top border-light border-opacity-10">
+    <p class="mb-0">© 2026 Race To The Top · Todos los derechos reservados</p>
   </div>
 </footer>
 
