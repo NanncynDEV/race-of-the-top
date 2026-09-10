@@ -1,0 +1,487 @@
+/* =========================================================
+   RACE TO THE TOP 2026 · REGISTRO
+========================================================= */
+
+.rtt-reg-page {
+  --rtt-wine: #37040f;
+  --rtt-wine-2: #500617;
+  --rtt-ink: #252525;
+  --rtt-muted: #777;
+  --rtt-line: #e1dbdd;
+  --rtt-soft: #f7f4f5;
+  background: #fff;
+  color: var(--rtt-ink);
+}
+
+/* HERO */
+.rtt-reg-hero {
+  padding: 9rem 0 5.5rem;
+  background: var(--rtt-wine);
+  color: #fff;
+}
+
+.rtt-reg-kicker {
+  margin: 0 0 1rem;
+  color: rgba(255,255,255,.55);
+  text-transform: uppercase;
+  letter-spacing: .18rem;
+  font-size: .76rem;
+  font-weight: 800;
+}
+
+.rtt-reg-hero h1 {
+  margin: 0;
+  font-size: clamp(4.7rem, 8vw, 8rem);
+  line-height: .83;
+  letter-spacing: -.06em;
+  font-weight: 900;
+}
+
+.rtt-reg-event-meta {
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255,255,255,.25);
+}
+
+.rtt-reg-event-meta span,
+.rtt-reg-event-meta strong,
+.rtt-reg-event-meta small {
+  display: block;
+}
+
+.rtt-reg-event-meta span {
+  color: rgba(255,255,255,.6);
+  font-size: .8rem;
+}
+
+.rtt-reg-event-meta strong {
+  margin-top: .5rem;
+  font-size: 2.1rem;
+}
+
+.rtt-reg-event-meta small {
+  color: rgba(255,255,255,.65);
+}
+
+/* SECTIONS */
+.rtt-reg-content {
+  padding: 6rem 0 8rem;
+}
+
+.rtt-reg-content > .container {
+  max-width: 1200px;
+}
+
+.rtt-reg-section + .rtt-reg-section {
+  margin-top: 7rem;
+}
+
+.rtt-reg-heading {
+  display: grid;
+  grid-template-columns: 78px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.rtt-reg-number {
+  color: var(--rtt-wine);
+  font-size: 3.6rem;
+  line-height: .9;
+  font-weight: 900;
+}
+
+.rtt-reg-heading p {
+  margin: 0 0 .3rem;
+  color: var(--rtt-wine);
+  text-transform: uppercase;
+  letter-spacing: .12rem;
+  font-size: .72rem;
+  font-weight: 800;
+}
+
+.rtt-reg-heading h2 {
+  margin: 0;
+  font-size: clamp(2.5rem,4vw,4rem);
+  line-height: .95;
+  letter-spacing: -.04em;
+}
+
+.rtt-reg-heading small {
+  display: block;
+  margin-top: .8rem;
+  color: var(--rtt-muted);
+}
+
+/* CONFERENCES */
+.rtt-conf-list {
+  display: grid;
+  gap: 1.7rem;
+}
+
+.rtt-conf-card {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.rtt-conf-card > input {
+  position: absolute;
+  opacity: 0;
+}
+
+.rtt-conf-ui {
+  display: grid;
+  grid-template-columns: 140px 1fr 180px;
+  min-height: 170px;
+  border: 1px solid var(--rtt-line);
+  background: #fff;
+  transition: .2s ease;
+}
+
+.rtt-conf-card:hover .rtt-conf-ui {
+  transform: translateY(-3px);
+  box-shadow: 0 1.2rem 2.8rem rgba(0,0,0,.07);
+}
+
+.rtt-conf-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--rtt-soft);
+  border-right: 1px solid var(--rtt-line);
+}
+
+.rtt-conf-date b {
+  font-size: 4.4rem;
+  line-height: .85;
+  letter-spacing: -.07em;
+}
+
+.rtt-conf-date small {
+  margin-top: .45rem;
+  color: var(--rtt-wine);
+  font-weight: 900;
+  letter-spacing: .12rem;
+}
+
+.rtt-conf-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 2.2rem;
+}
+
+.rtt-conf-info small {
+  color: var(--rtt-wine);
+  font-weight: 800;
+}
+
+.rtt-conf-info strong {
+  margin-top: .35rem;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.rtt-conf-info em {
+  margin-top: .65rem;
+  color: var(--rtt-muted);
+  font-style: normal;
+}
+
+.rtt-conf-select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .7rem;
+  border-left: 1px solid var(--rtt-line);
+  color: var(--rtt-wine);
+  text-align: center;
+}
+
+.rtt-conf-select i {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--rtt-wine);
+  border-radius: 50%;
+}
+
+.rtt-conf-select b {
+  font-size: .74rem;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+}
+
+.rtt-conf-card > input:checked + .rtt-conf-ui {
+  background: var(--rtt-wine);
+  color: #fff;
+  border-color: var(--rtt-wine);
+}
+
+.rtt-conf-card > input:checked + .rtt-conf-ui .rtt-conf-date {
+  background: rgba(255,255,255,.07);
+  border-right-color: rgba(255,255,255,.2);
+}
+
+.rtt-conf-card > input:checked + .rtt-conf-ui .rtt-conf-date small,
+.rtt-conf-card > input:checked + .rtt-conf-ui .rtt-conf-info small,
+.rtt-conf-card > input:checked + .rtt-conf-ui .rtt-conf-info em,
+.rtt-conf-card > input:checked + .rtt-conf-ui .rtt-conf-select {
+  color: #fff;
+}
+
+.rtt-conf-card > input:checked + .rtt-conf-ui .rtt-conf-info em {
+  opacity: .7;
+}
+
+.rtt-conf-card > input:checked + .rtt-conf-ui .rtt-conf-select {
+  border-left-color: rgba(255,255,255,.2);
+}
+
+.rtt-conf-card > input:checked + .rtt-conf-ui .rtt-conf-select i {
+  border: 7px solid #fff;
+}
+
+.rtt-conf-featured .rtt-conf-ui {
+  border-left: 6px solid var(--rtt-wine);
+}
+
+/* WORKSHOPS */
+.rtt-workshop-block + .rtt-workshop-block {
+  margin-top: 5rem;
+}
+
+.rtt-workshop-block-title {
+  margin-bottom: 1.6rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--rtt-line);
+}
+
+.rtt-workshop-block-title span {
+  color: var(--rtt-wine);
+  font-weight: 900;
+}
+
+.rtt-workshop-block-title h3 {
+  margin: .35rem 0 0;
+  font-size: 1.7rem;
+}
+
+.rtt-workshop-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1.5rem;
+}
+
+.rtt-workshop-card {
+  border: 1px solid var(--rtt-line);
+  background: #fff;
+}
+
+.rtt-workshop-body {
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.7rem;
+}
+
+.rtt-workshop-body > small {
+  color: var(--rtt-wine);
+  text-transform: uppercase;
+  letter-spacing: .08rem;
+  font-weight: 800;
+}
+
+.rtt-workshop-body h4 {
+  margin: 1.5rem 0 auto;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.rtt-day-choice {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .7rem;
+  margin-top: 1.5rem;
+}
+
+.rtt-day-choice label {
+  position: relative;
+  cursor: pointer;
+}
+
+.rtt-day-choice input {
+  position: absolute;
+  opacity: 0;
+}
+
+.rtt-day-choice span {
+  display: block;
+  padding: .8rem .6rem;
+  border: 1px solid var(--rtt-wine);
+  color: var(--rtt-wine);
+  text-align: center;
+  font-size: .75rem;
+  font-weight: 900;
+}
+
+.rtt-day-choice input:checked + span {
+  background: var(--rtt-wine);
+  color: #fff;
+}
+
+.rtt-conflict {
+  margin-top: 1.5rem;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid var(--rtt-wine);
+  background: #fff0f2;
+  color: #6d2633;
+}
+
+/* FORM */
+.rtt-data-section {
+  max-width: 1000px;
+}
+
+.rtt-form {
+  padding: 2.5rem;
+  background: var(--rtt-soft);
+}
+
+.rtt-form label {
+  display: block;
+  margin-bottom: .55rem;
+  font-size: .76rem;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  font-weight: 800;
+  color: #625c5f;
+}
+
+.rtt-form input,
+.rtt-form select {
+  width: 100%;
+  min-height: 52px;
+  border: 1px solid #cbc3c6;
+  border-radius: .55rem;
+  background: #fff;
+  padding: .7rem .9rem;
+}
+
+.rtt-form input:focus,
+.rtt-form select:focus {
+  outline: 2px solid rgba(55,4,15,.14);
+  border-color: var(--rtt-wine);
+}
+
+.rtt-summary {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-left: 4px solid var(--rtt-wine);
+}
+
+.rtt-summary p {
+  margin-bottom: .7rem;
+  color: var(--rtt-wine);
+  text-transform: uppercase;
+  letter-spacing: .08rem;
+  font-size: .72rem;
+  font-weight: 900;
+}
+
+#summaryList {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+#summaryList li + li {
+  margin-top: .45rem;
+}
+
+#summaryEmpty {
+  color: var(--rtt-muted);
+  font-size: .88rem;
+}
+
+.rtt-privacy {
+  display: flex !important;
+  gap: .7rem;
+  align-items: flex-start;
+  margin: 1.8rem 0;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font-weight: 500 !important;
+}
+
+.rtt-privacy input {
+  width: auto;
+  min-height: auto;
+  margin-top: .2rem;
+}
+
+.rtt-submit {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+  background: var(--rtt-wine);
+  color: #fff;
+  padding: 1.1rem 1.3rem;
+  font-weight: 900;
+}
+
+.rtt-submit b {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+@media (max-width: 991.98px) {
+  .rtt-workshop-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .rtt-reg-hero {
+    padding-top: 7rem;
+  }
+
+  .rtt-conf-ui {
+    grid-template-columns: 90px 1fr;
+  }
+
+  .rtt-conf-select {
+    grid-column: 1 / -1;
+    min-height: 55px;
+    flex-direction: row;
+    border-left: 0;
+    border-top: 1px solid var(--rtt-line);
+  }
+
+  .rtt-conf-date b {
+    font-size: 3.3rem;
+  }
+
+  .rtt-conf-info {
+    padding: 1.4rem;
+  }
+
+  .rtt-workshop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rtt-reg-heading {
+    grid-template-columns: 55px 1fr;
+  }
+
+  .rtt-reg-number {
+    font-size: 2.6rem;
+  }
+
+  .rtt-form {
+    padding: 1.5rem;
+  }
+}

@@ -1,20 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gracias | Race of the Top 2026</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Race of the Top 2026 | Gracias</title>
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/app.css">
+  <link rel="stylesheet" href="./css/registro.css">
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">Race of the Top 2026</a>
-                <a href="index.html" class="btn btn-outline-light btn-sm">
-                    Volver al evento
-                </a>
-            </div>
-        </nav>
-    </header>
+
+<body class="thanks-page">
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top event-navbar" aria-label="Navegación principal">
+    <div class="container">
+
+      <a class="event-brand" href="index.html#inicio" aria-label="Race of the Top 2026 - Inicio">
+        <span class="brand-mark">RT</span>
+        <span class="brand-copy">
+          <strong>Race of the Top</strong>
+          <small>Colima · 2026</small>
+        </span>
+      </a>
+
+      <div class="ms-auto">
+        <a class="btn btn-light nav-register" href="index.html">Volver al inicio</a>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+<main class="thanks-main">
+  <div class="thanks-orbit thanks-orbit-one" aria-hidden="true"></div>
+  <div class="thanks-orbit thanks-orbit-two" aria-hidden="true"></div>
+
+  <div class="container position-relative">
+    <div class="thanks-card">
+
+      <div class="thanks-mark" aria-hidden="true">
+        <span>✓</span>
+      </div>
+
+      <p class="thanks-kicker">Race of the Top 2026</p>
+      <h1>¡Gracias por registrarte!</h1>
+
+      <p class="thanks-lead">
+        Tu solicitud de registro fue recibida correctamente.
+      </p>
+
+      <div class="thanks-event-data">
+        <div>
+          <span>Fechas</span>
+          <strong>22 y 23 de octubre de 2026</strong>
+        </div>
+
+        <div>
+          <span>Sede</span>
+          <strong>Allegra, Centro de Convenciones</strong>
+        </div>
+      </div>
+
+      <div class="thanks-placeholder">
+        <span class="thanks-placeholder-label">Siguiente etapa</span>
+        <h2>Tu acceso quedará aquí</h2>
+        <p>
+          Cuando conectemos el registro con la base de datos, esta pantalla mostrará
+          el folio único y el código QR asignados al participante.
+        </p>
+
+        <div class="thanks-pass">
+          <div>
+            <small>Folio</small>
+            <strong>ROTT26-0000</strong>
+          </div>
+          <div class="thanks-qr" aria-hidden="true">QR</div>
+        </div>
+      </div>
+
+      <div class="thanks-actions">
+        <a href="index.html" class="btn btn-light btn-lg px-5">Volver al inicio</a>
+        <a href="index.html#conferencias" class="btn btn-outline-light btn-lg px-5">Ver programa</a>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="container-fluid bg-dark text-white py-3">
+  <div class="container text-center">
+    <p class="mb-0">© 2026 Race of the Top · Todos los derechos reservados</p>
+  </div>
+</footer>
+
+<script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

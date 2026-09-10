@@ -1,218 +1,944 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Race To The Top 2026 | Registro</title>
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/app.css">
+  <style>
+/* =========================================================
+   RACE TO THE TOP 2026 · REGISTRO
+========================================================= */
 
-  <title>Registro | Race of the Top 2026</title>
+.rtt-reg-page {
+  --rtt-wine: #37040f;
+  --rtt-wine-2: #500617;
+  --rtt-ink: #252525;
+  --rtt-muted: #777;
+  --rtt-line: #e1dbdd;
+  --rtt-soft: #f7f4f5;
+  background: #fff;
+  color: var(--rtt-ink);
+}
 
-  <link
-    rel="stylesheet"
-    href="./css/bootstrap.min.css">
+/* HERO */
+.rtt-reg-hero {
+  padding: 9rem 0 5.5rem;
+  background: var(--rtt-wine);
+  color: #fff;
+}
 
-  <link
-    rel="stylesheet"
-    href="./css/app.css">
+.rtt-reg-kicker {
+  margin: 0 0 1rem;
+  color: rgba(255,255,255,.55);
+  text-transform: uppercase;
+  letter-spacing: .18rem;
+  font-size: .76rem;
+  font-weight: 800;
+}
+
+.rtt-reg-hero h1 {
+  margin: 0;
+  font-size: clamp(4.7rem, 8vw, 8rem);
+  line-height: .83;
+  letter-spacing: -.06em;
+  font-weight: 900;
+}
+
+.rtt-reg-event-meta {
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255,255,255,.25);
+}
+
+.rtt-reg-event-meta span,
+.rtt-reg-event-meta strong,
+.rtt-reg-event-meta small {
+  display: block;
+}
+
+.rtt-reg-event-meta span {
+  color: rgba(255,255,255,.6);
+  font-size: .8rem;
+}
+
+.rtt-reg-event-meta strong {
+  margin-top: .5rem;
+  font-size: 2.1rem;
+}
+
+.rtt-reg-event-meta small {
+  color: rgba(255,255,255,.65);
+}
+
+/* SECTIONS */
+.rtt-reg-content {
+  padding: 6rem 0 8rem;
+}
+
+.rtt-reg-content > .container {
+  max-width: 1200px;
+}
+
+.rtt-reg-section + .rtt-reg-section {
+  margin-top: 7rem;
+}
+
+.rtt-reg-heading {
+  display: grid;
+  grid-template-columns: 78px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.rtt-reg-number {
+  color: var(--rtt-wine);
+  font-size: 3.6rem;
+  line-height: .9;
+  font-weight: 900;
+}
+
+.rtt-reg-heading p {
+  margin: 0 0 .3rem;
+  color: var(--rtt-wine);
+  text-transform: uppercase;
+  letter-spacing: .12rem;
+  font-size: .72rem;
+  font-weight: 800;
+}
+
+.rtt-reg-heading h2 {
+  margin: 0;
+  font-size: clamp(2.5rem,4vw,4rem);
+  line-height: .95;
+  letter-spacing: -.04em;
+}
+
+.rtt-reg-heading small {
+  display: block;
+  margin-top: .8rem;
+  color: var(--rtt-muted);
+}
+
+/* CONFERENCES */
+.rtt-conf-list {
+  display: grid;
+  gap: 1.7rem;
+}
+
+.rtt-conf-card {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.rtt-conf-card > input {
+  position: absolute;
+  opacity: 0;
+}
+
+.rtt-conf-ui {
+  display: grid;
+  grid-template-columns: 140px 1fr 180px;
+  min-height: 170px;
+  border: 1px solid var(--rtt-line);
+  background: #fff;
+  transition: .2s ease;
+}
+
+.rtt-conf-card:hover .rtt-conf-ui {
+  transform: translateY(-3px);
+  box-shadow: 0 1.2rem 2.8rem rgba(0,0,0,.07);
+}
+
+.rtt-conf-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--rtt-soft);
+  border-right: 1px solid var(--rtt-line);
+}
+
+.rtt-conf-date b {
+  font-size: 4.4rem;
+  line-height: .85;
+  letter-spacing: -.07em;
+}
+
+.rtt-conf-date small {
+  margin-top: .45rem;
+  color: var(--rtt-wine);
+  font-weight: 900;
+  letter-spacing: .12rem;
+}
+
+.rtt-conf-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 2.2rem;
+}
+
+.rtt-conf-info small {
+  color: var(--rtt-wine);
+  font-weight: 800;
+}
+
+.rtt-conf-info strong {
+  margin-top: .35rem;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.rtt-conf-info em {
+  margin-top: .65rem;
+  color: var(--rtt-muted);
+  font-style: normal;
+}
+
+.rtt-conf-select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .7rem;
+  border-left: 1px solid var(--rtt-line);
+  color: var(--rtt-wine);
+  text-align: center;
+}
+
+.rtt-conf-select i {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--rtt-wine);
+  border-radius: 50%;
+}
+
+.rtt-conf-select b {
+  font-size: .74rem;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+}
+
+.rtt-conf-card > input:checked + .rtt-conf-ui {
+  background: var(--rtt-wine);
+  color: #fff;
+  border-color: var(--rtt-wine);
+}
+
+.rtt-conf-card > input:checked + .rtt-conf-ui .rtt-conf-date {
+  background: rgba(255,255,255,.07);
+  border-right-color: rgba(255,255,255,.2);
+}
+
+.rtt-conf-card > input:checked + .rtt-conf-ui .rtt-conf-date small,
+.rtt-conf-card > input:checked + .rtt-conf-ui .rtt-conf-info small,
+.rtt-conf-card > input:checked + .rtt-conf-ui .rtt-conf-info em,
+.rtt-conf-card > input:checked + .rtt-conf-ui .rtt-conf-select {
+  color: #fff;
+}
+
+.rtt-conf-card > input:checked + .rtt-conf-ui .rtt-conf-info em {
+  opacity: .7;
+}
+
+.rtt-conf-card > input:checked + .rtt-conf-ui .rtt-conf-select {
+  border-left-color: rgba(255,255,255,.2);
+}
+
+.rtt-conf-card > input:checked + .rtt-conf-ui .rtt-conf-select i {
+  border: 7px solid #fff;
+}
+
+.rtt-conf-featured .rtt-conf-ui {
+  border-left: 6px solid var(--rtt-wine);
+}
+
+/* WORKSHOPS */
+.rtt-workshop-block + .rtt-workshop-block {
+  margin-top: 5rem;
+}
+
+.rtt-workshop-block-title {
+  margin-bottom: 1.6rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--rtt-line);
+}
+
+.rtt-workshop-block-title span {
+  color: var(--rtt-wine);
+  font-weight: 900;
+}
+
+.rtt-workshop-block-title h3 {
+  margin: .35rem 0 0;
+  font-size: 1.7rem;
+}
+
+.rtt-workshop-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1.5rem;
+}
+
+.rtt-workshop-card {
+  border: 1px solid var(--rtt-line);
+  background: #fff;
+}
+
+.rtt-workshop-body {
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.7rem;
+}
+
+.rtt-workshop-body > small {
+  color: var(--rtt-wine);
+  text-transform: uppercase;
+  letter-spacing: .08rem;
+  font-weight: 800;
+}
+
+.rtt-workshop-body h4 {
+  margin: 1.5rem 0 auto;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.rtt-day-choice {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .7rem;
+  margin-top: 1.5rem;
+}
+
+.rtt-day-choice label {
+  position: relative;
+  cursor: pointer;
+}
+
+.rtt-day-choice input {
+  position: absolute;
+  opacity: 0;
+}
+
+.rtt-day-choice span {
+  display: block;
+  padding: .8rem .6rem;
+  border: 1px solid var(--rtt-wine);
+  color: var(--rtt-wine);
+  text-align: center;
+  font-size: .75rem;
+  font-weight: 900;
+}
+
+.rtt-day-choice input:checked + span {
+  background: var(--rtt-wine);
+  color: #fff;
+}
+
+.rtt-conflict {
+  margin-top: 1.5rem;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid var(--rtt-wine);
+  background: #fff0f2;
+  color: #6d2633;
+}
+
+/* FORM */
+.rtt-data-section {
+  max-width: 1000px;
+}
+
+.rtt-form {
+  padding: 2.5rem;
+  background: var(--rtt-soft);
+}
+
+.rtt-form label {
+  display: block;
+  margin-bottom: .55rem;
+  font-size: .76rem;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  font-weight: 800;
+  color: #625c5f;
+}
+
+.rtt-form input,
+.rtt-form select {
+  width: 100%;
+  min-height: 52px;
+  border: 1px solid #cbc3c6;
+  border-radius: .55rem;
+  background: #fff;
+  padding: .7rem .9rem;
+}
+
+.rtt-form input:focus,
+.rtt-form select:focus {
+  outline: 2px solid rgba(55,4,15,.14);
+  border-color: var(--rtt-wine);
+}
+
+.rtt-summary {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-left: 4px solid var(--rtt-wine);
+}
+
+.rtt-summary p {
+  margin-bottom: .7rem;
+  color: var(--rtt-wine);
+  text-transform: uppercase;
+  letter-spacing: .08rem;
+  font-size: .72rem;
+  font-weight: 900;
+}
+
+#summaryList {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+#summaryList li + li {
+  margin-top: .45rem;
+}
+
+#summaryEmpty {
+  color: var(--rtt-muted);
+  font-size: .88rem;
+}
+
+.rtt-privacy {
+  display: flex !important;
+  gap: .7rem;
+  align-items: flex-start;
+  margin: 1.8rem 0;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font-weight: 500 !important;
+}
+
+.rtt-privacy input {
+  width: auto;
+  min-height: auto;
+  margin-top: .2rem;
+}
+
+.rtt-submit {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+  background: var(--rtt-wine);
+  color: #fff;
+  padding: 1.1rem 1.3rem;
+  font-weight: 900;
+}
+
+.rtt-submit b {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+@media (max-width: 991.98px) {
+  .rtt-workshop-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .rtt-reg-hero {
+    padding-top: 7rem;
+  }
+
+  .rtt-conf-ui {
+    grid-template-columns: 90px 1fr;
+  }
+
+  .rtt-conf-select {
+    grid-column: 1 / -1;
+    min-height: 55px;
+    flex-direction: row;
+    border-left: 0;
+    border-top: 1px solid var(--rtt-line);
+  }
+
+  .rtt-conf-date b {
+    font-size: 3.3rem;
+  }
+
+  .rtt-conf-info {
+    padding: 1.4rem;
+  }
+
+  .rtt-workshop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rtt-reg-heading {
+    grid-template-columns: 55px 1fr;
+  }
+
+  .rtt-reg-number {
+    font-size: 2.6rem;
+  }
+
+  .rtt-form {
+    padding: 1.5rem;
+  }
+}
+
+  
+/* Ajuste de distribución para la programación actual */
+@media (min-width: 992px) {
+  .rtt-workshop-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.8rem;
+  }
+}
+</style>
 </head>
+<body class="rtt-reg-page">
 
-<body>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top event-navbar" aria-label="Navegación principal">
+    <div class="container">
+      <a class="event-brand" href="index.html#inicio">
+        <span class="brand-mark">RT</span>
+        <span class="brand-copy">
+          <strong>Race To The Top</strong>
+          <small>Colima · 2026</small>
+        </span>
+      </a>
 
-  <!-- =========================
-       HEADER
-  ========================== -->
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+              aria-controls="menuPrincipal" aria-expanded="false"
+              aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <header>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-      <div class="container">
-
-        <a class="navbar-brand" href="index.html">
-          Race of the Top 2026
-        </a>
-
-        <a
-          href="index.html"
-          class="btn btn-outline-light btn-sm">
-
-          Volver al evento
-
-        </a>
-
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#evento">Evento</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#conferencias">Conferencias</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#talleres">Talleres</a></li>
+          <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+            <a class="btn btn-light nav-register" href="registro.html" aria-current="page">Registro</a>
+          </li>
+        </ul>
       </div>
+    </div>
+  </nav>
+</header>
 
-    </nav>
-
-  </header>
-
-
-  <!-- =========================
-       REGISTRO
-  ========================== -->
-
-  <main>
-
-    <section class="container py-5">
-
-      <div class="row justify-content-center">
-
-        <div class="col-12 col-lg-8">
-
-          <div class="text-center mb-5">
-
-            <p class="text-uppercase mb-1">
-              Participa
-            </p>
-
-            <h1>
-              Registro al evento
-            </h1>
-
-            <p>
-              Completa tus datos para solicitar tu registro
-              a Race of the Top 2026.
-            </p>
-
+<main>
+  <section class="rtt-reg-hero">
+    <div class="container">
+      <div class="row align-items-end g-4">
+        <div class="col-lg-8">
+          <p class="rtt-reg-kicker">Registro · Race To The Top 2026</p>
+          <h1>Construye<br>tu programa.</h1>
+        </div>
+        <div class="col-lg-4">
+          <div class="rtt-reg-event-meta">
+            <span>22 y 23 de octubre de 2026</span>
+            <strong>Allegra</strong>
+            <small>Centro de Convenciones · Colima</small>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="rtt-reg-content">
+    <div class="container">
 
-    <section id="registro" class="container py-5">
-
-            <div class="row justify-content-center">
-                <div class="col-12 col-lg-8">
-
-                        
-
-                    <form name="registro-race-of-the-top"
-                          method="POST"
-                          data-netlify="true">
-
-                          <input
-                              type="hidden"
-                              name="form-name"
-                              value="registro-race-of-the-top">
-
-                        <div class="row g-3">
-
-                            <div class="col-12 col-md-6">
-                                    <label for="nombre" class="form-label">Nombre completo</label>
-                                        <input
-                                                type="text"
-                                                class="form-control"
-                                                id="nombre"
-                                                name="nombre"
-                                                autocomplete="name"
-                                                required>
-                            </div>
-
-                            <div class="col-12 col-md-6">
-                                <label for="correo" class="form-label">Correo electrónico</label>
-                                <input
-                                    type="email"
-                                    class="form-control"
-                                    id="correo"
-                                    name="correo"
-                                    autocomplete="email"
-                                    required>
-                            </div>
-
-                            <div class="col-12 col-md-6">
-                                <label for="telefono" class="form-label">Teléfono</label>
-                                <input
-                                    type="tel"
-                                    class="form-control"
-                                    id="telefono"
-                                    name="telefono"
-                                    autocomplete="tel"
-                                  >
-                            </div>
-
-                            <div class="col-12 col-md-6">
-                                <label for="institucion" class="form-label">
-                                    Institución / Empresa
-                                </label>
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="institucion"
-                                    name="institucion">
-                            </div>
-
-          <div class="col-12">
-            <label for="perfil" class="form-label">Perfil del participante</label>
-
-            <select
-              class="form-select"
-              id="perfil"
-              name="perfil"
-              required>
-
-              <option value="" selected disabled>
-                Selecciona una opción
-              </option>
-
-              <option value="estudiante">Estudiante</option>
-              <option value="profesional">Profesional</option>
-              <option value="empresa">Empresa / Emprendimiento</option>
-              <option value="docente">Docente / Académico</option>
-              <option value="otro">Otro</option>
-
-            </select>
+      <!-- 01 CONFERENCIAS -->
+      <section class="rtt-reg-section">
+        <div class="rtt-reg-heading">
+          <span class="rtt-reg-number">01</span>
+          <div>
+            <p>Conferencias</p>
+            <h2>Selecciona por bloque</h2>
+            <small>El registro incluye el bloque completo; no se selecciona por ponente individual.</small>
           </div>
-
-          <div class="col-12">
-
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="aviso"
-                required>
-
-              <label class="form-check-label" for="aviso">
-                He leído y acepto el aviso de privacidad.
-              </label>
-            </div>
-
-          </div>
-
-          <div class="col-12 text-center mt-4">
-
-            <a
-          href="gracias.html"
-          class="btn btn-dark px-5">
-
-          Registrarme
-
-        </a>
-
-
-          </div>
-
         </div>
 
-      </form>
+        <div class="rtt-conf-list">
+
+          <label class="rtt-conf-card">
+            <input type="checkbox" name="conference" value="conferencias-dia-1"
+                   data-label="22 OCT · Conferencias · Oso Trava, Nazareth Black y Daniel Ordaz · 09:00–14:00">
+            <span class="rtt-conf-ui">
+              <span class="rtt-conf-date"><b>22</b><small>OCT</small></span>
+              <span class="rtt-conf-info">
+                <small>09:00 – 14:00 h</small>
+                <strong>Bloque de conferencias · Día 1</strong>
+                <em>Oso Trava · Nazareth Black · Daniel Ordaz</em>
+              </span>
+              <span class="rtt-conf-select"><i></i><b>Seleccionar bloque completo</b></span>
+            </span>
+          </label>
+
+          <label class="rtt-conf-card">
+            <input type="checkbox" name="conference" value="conferencias-dia-2"
+                   data-label="23 OCT · Conferencias · Melissa Arria, María Amores y Altagracia Gómez Sierra · 09:00–14:00">
+            <span class="rtt-conf-ui">
+              <span class="rtt-conf-date"><b>23</b><small>OCT</small></span>
+              <span class="rtt-conf-info">
+                <small>09:00 – 14:00 h</small>
+                <strong>Bloque de conferencias · Día 2</strong>
+                <em>Melissa Arria · Marketing · María Amores · Conversatorio con Altagracia Gómez Sierra</em>
+              </span>
+              <span class="rtt-conf-select"><i></i><b>Seleccionar bloque completo</b></span>
+            </span>
+          </label>
+
+          <label class="rtt-conf-card rtt-conf-featured">
+            <input type="checkbox" id="juanLombana" name="conference" value="juan-lombana"
+                   data-label="23 OCT · Juan Lombana · 17:00–19:00">
+            <span class="rtt-conf-ui">
+              <span class="rtt-conf-date"><b>23</b><small>OCT</small></span>
+              <span class="rtt-conf-info">
+                <small>17:00 – 19:00 h</small>
+                <strong>Conferencia especial</strong>
+                <em>Juan Lombana</em>
+              </span>
+              <span class="rtt-conf-select"><i></i><b>Seleccionar conferencia</b></span>
+            </span>
+          </label>
+
+        </div>
+      </section>
+
+      <!-- 02 TALLERES -->
+      <section class="rtt-reg-section">
+        <div class="rtt-reg-heading">
+          <span class="rtt-reg-number">02</span>
+          <div>
+            <p>Talleres</p>
+            <h2>Selecciona cada taller</h2>
+            <small>Elige un taller por bloque horario y por día.</small>
+          </div>
+        </div>
+
+        <div class="rtt-workshop-block">
+          <div class="rtt-workshop-block-title">
+            <span>16:00 – 17:30 h</span>
+            <h3>Primer bloque</h3>
+            <p class="text-muted mt-2 mb-0">22 OCT: 4 talleres · 23 OCT: 3 talleres.</p>
+          </div>
+
+          <div class="rtt-workshop-grid">
+
+            <article class="rtt-workshop-card">
+              <div class="rtt-workshop-body">
+                <small>Taller 01</small>
+                <h4>Emprender para transformar</h4>
+                <div class="rtt-day-choice">
+                  <label><input type="radio" name="t22b1" value="emprender-22" data-label="22 OCT · Emprender para transformar · 16:00–17:30"><span>22 OCT</span></label>
+                  <label><input type="radio" name="t23b1" value="emprender-23" data-label="23 OCT · Emprender para transformar · 16:00–17:30"><span>23 OCT</span></label>
+                </div>
+              </div>
+            </article>
+
+            <article class="rtt-workshop-card">
+              <div class="rtt-workshop-body">
+                <small>Taller 02</small>
+                <h4>Automatización para negocios con IA</h4>
+                <div class="rtt-day-choice">
+                  <label><input type="radio" name="t22b1" value="automatizacion-22" data-label="22 OCT · Automatización para negocios con IA · 16:00–17:30"><span>22 OCT</span></label>
+                  <label><input type="radio" name="t23b1" value="automatizacion-23" data-label="23 OCT · Automatización para negocios con IA · 16:00–17:30"><span>23 OCT</span></label>
+                </div>
+              </div>
+            </article>
+
+            <article class="rtt-workshop-card">
+              <div class="rtt-workshop-body">
+                <small>Taller 03</small>
+                <h4>Contabilidad para emprendedores tecnológicos</h4>
+                <div class="rtt-day-choice">
+                  <label><input type="radio" name="t22b1" value="contabilidad-22" data-label="22 OCT · Contabilidad para emprendedores tecnológicos · 16:00–17:30"><span>22 OCT</span></label>
+                  <label><input type="radio" name="t23b1" value="contabilidad-23" data-label="23 OCT · Contabilidad para emprendedores tecnológicos · 16:00–17:30"><span>23 OCT</span></label>
+                </div>
+              </div>
+            </article>
+
+            <article class="rtt-workshop-card">
+              <div class="rtt-workshop-body">
+                <small>Taller 04 · Solo 22 OCT</small>
+                <h4>Neurogestión emocional en la era digital</h4>
+                <div class="rtt-day-choice">
+                  <label><input type="radio" name="t22b1" value="neurogestion-22" data-label="22 OCT · Neurogestión emocional en la era digital · 16:00–17:30"><span>22 OCT</span></label>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="rtt-workshop-block">
+          <div class="rtt-workshop-block-title">
+            <span>18:00 – 19:30 h</span>
+            <h3>Segundo bloque</h3>
+            <p class="text-muted mt-2 mb-0">3 talleres disponibles el 22 y el 23 de octubre.</p>
+          </div>
+
+          <div class="rtt-workshop-grid">
+
+            <article class="rtt-workshop-card">
+              <div class="rtt-workshop-body">
+                <small>Taller 05</small>
+                <h4>El cliente del futuro</h4>
+                <div class="rtt-day-choice">
+                  <label><input type="radio" name="t22b2" value="cliente-22" data-label="22 OCT · El cliente del futuro · 18:00–19:30"><span>22 OCT</span></label>
+                  <label><input type="radio" name="t23b2" value="cliente-23" data-label="23 OCT · El cliente del futuro · 18:00–19:30"><span>23 OCT</span></label>
+                </div>
+              </div>
+            </article>
+
+            <article class="rtt-workshop-card">
+              <div class="rtt-workshop-body">
+                <small>Taller 06</small>
+                <h4>Food Hacking: la ciencia detrás de los alimentos</h4>
+                <div class="rtt-day-choice">
+                  <label><input type="radio" name="t22b2" value="food-22" data-label="22 OCT · Food Hacking · 18:00–19:30"><span>22 OCT</span></label>
+                  <label><input type="radio" name="t23b2" value="food-23" data-label="23 OCT · Food Hacking · 18:00–19:30"><span>23 OCT</span></label>
+                </div>
+              </div>
+            </article>
+
+            <article class="rtt-workshop-card">
+              <div class="rtt-workshop-body">
+                <small>Taller 07</small>
+                <h4>Estrategias digitales para negocios</h4>
+                <div class="rtt-day-choice">
+                  <label><input type="radio" name="t22b2" value="estrategias-22" data-label="22 OCT · Estrategias digitales para negocios · 18:00–19:30"><span>22 OCT</span></label>
+                  <label><input type="radio" name="t23b2" value="estrategias-23" data-label="23 OCT · Estrategias digitales para negocios · 18:00–19:30"><span>23 OCT</span></label>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <div id="conflict" class="rtt-conflict" hidden>
+            <strong>Horario incompatible:</strong>
+            Juan Lombana (17:00–19:00) se cruza con los talleres del 23 de octubre
+            tanto del bloque 16:00–17:30 como del bloque 18:00–19:30.
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 DATOS -->
+      <section class="rtt-reg-section rtt-data-section">
+        <div class="rtt-reg-heading">
+          <span class="rtt-reg-number">03</span>
+          <div>
+            <p>Participante</p>
+            <h2>Completa tus datos</h2>
+          </div>
+        </div>
+
+        <form id="registrationForm" action="gracias.html" method="get" class="rtt-form">
+          <div class="row g-4 g-lg-5">
+            <div class="col-12 col-md-6">
+              <label for="nombre">Nombre completo *</label>
+              <input id="nombre" name="nombre" type="text" required>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="correo">Correo electrónico *</label>
+              <input id="correo" name="correo" type="email" required>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="telefono">Teléfono *</label>
+              <input id="telefono" name="telefono" type="tel" required>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="institucion">Institución / empresa</label>
+              <input id="institucion" name="institucion" type="text">
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="tipo">Tipo de participante *</label>
+              <select id="tipo" name="tipo" required>
+                <option value="" selected disabled>Selecciona una opción</option>
+                <option>Estudiante</option>
+                <option>Emprendedor(a)</option>
+                <option>Empresario(a)</option>
+                <option>Profesionista</option>
+                <option>Público general</option>
+                <option>Otro</option>
+              </select>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="municipio">Municipio / localidad</label>
+              <input id="municipio" name="municipio" type="text">
+            </div>
+          </div>
+
+          <div class="rtt-summary">
+            <div>
+              <p>Tu programa</p>
+              <ul id="summaryList"></ul>
+              <span id="summaryEmpty">Aún no has seleccionado actividades.</span>
+            </div>
+          </div>
+
+          <div id="hiddenSelections"></div>
+
+          <label class="rtt-privacy">
+            <input type="checkbox" required>
+            <span>Acepto el aviso de privacidad.</span>
+          </label>
+
+          <button type="submit" class="rtt-submit">
+            <span>Finalizar registro</span><b>→</b>
+          </button>
+        </form>
+      </section>
 
     </div>
-  </div>
+  </section>
+</main>
 
-</section>
-
-</div>
-
+<footer class="container-fluid bg-dark text-white pt-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12 col-md-4 text-center">
+        <h3 class="h5">Sobre nosotros</h3>
+        <a href="index.html#evento" class="text-white text-decoration-none">¿Qué es Race To The Top?</a>
       </div>
+      <div class="col-12 col-md-4 text-center">
+        <h3 class="h5">Explora</h3>
+        <p class="mb-1"><a href="index.html#conferencias" class="text-white text-decoration-none">Conferencias</a></p>
+        <p class="mb-1"><a href="index.html#talleres" class="text-white text-decoration-none">Talleres</a></p>
+        <p><a href="registro.html" class="text-white text-decoration-none">Registro</a></p>
+      </div>
+      <div class="col-12 col-md-4 text-center">
+        <h3 class="h5">Contacto</h3>
+        <p class="mb-1">Correo institucional</p>
+        <p>Allegra, Centro de Convenciones</p>
+      </div>
+    </div>
+  </div>
+  <div class="text-center py-3 mt-4 border-top border-light border-opacity-10">
+    <p class="mb-0">© 2026 Race To The Top · Todos los derechos reservados</p>
+  </div>
+</footer>
 
-    </section>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script>
+(() => {
+  const selectable = [...document.querySelectorAll(
+    'input[name="conference"], .rtt-day-choice input'
+  )];
 
-  </main>
+  const juan = document.getElementById('juanLombana');
+  const workshops23 = [
+    ...document.querySelectorAll('input[name="t23b1"], input[name="t23b2"]')
+  ];
+  const conflict = document.getElementById('conflict');
+  const summaryList = document.getElementById('summaryList');
+  const summaryEmpty = document.getElementById('summaryEmpty');
+  const hiddenSelections = document.getElementById('hiddenSelections');
 
+  function selected() {
+    return selectable.filter(input => input.checked);
+  }
 
-  <script src="./js/bootstrap.bundle.min.js"></script>
+  function updateSummary() {
+    const items = selected();
+    summaryList.innerHTML = '';
+    summaryEmpty.hidden = items.length > 0;
+
+    items.forEach(input => {
+      const li = document.createElement('li');
+      li.textContent = input.dataset.label || input.value;
+      summaryList.appendChild(li);
+    });
+  }
+
+  function hasConflict() {
+    const clash = juan && juan.checked && workshops23.some(input => input.checked);
+    if (conflict) conflict.hidden = !clash;
+    return clash;
+  }
+
+  selectable.forEach(input => {
+    input.addEventListener('change', () => {
+      updateSummary();
+      hasConflict();
+    });
+  });
+
+  const params = new URLSearchParams(window.location.search);
+  const actividad = params.get('actividad');
+
+  const blockMap = {
+    'oso-trava': 'conferencias-dia-1',
+    'nazareth-black': 'conferencias-dia-1',
+    'daniel-ordaz': 'conferencias-dia-1',
+
+    'melissa-arria': 'conferencias-dia-2',
+    'maria-amores': 'conferencias-dia-2',
+    'altagracia-gomez': 'conferencias-dia-2',
+
+    'juan-lombana': 'juan-lombana',
+
+    'emprender-transformar': 'emprender-22',
+    'automatizacion-ia': 'automatizacion-22',
+    'contabilidad-emprendedores': 'contabilidad-22',
+    'neurogestion-emocional': 'neurogestion-22',
+    'cliente-futuro': 'cliente-22',
+    'food-hacking': 'food-22',
+    'estrategias-digitales': 'estrategias-22'
+  };
+
+  if (actividad) {
+    const wanted = blockMap[actividad] || actividad;
+    const target = selectable.find(input => input.value === wanted);
+
+    if (target) {
+      target.checked = true;
+      updateSummary();
+      hasConflict();
+    }
+  }
+
+  document.getElementById('registrationForm').addEventListener('submit', event => {
+    if (hasConflict()) {
+      event.preventDefault();
+      conflict.scrollIntoView({behavior: 'smooth', block: 'center'});
+      return;
+    }
+
+    hiddenSelections.innerHTML = '';
+    selected().forEach(input => {
+      const hidden = document.createElement('input');
+      hidden.type = 'hidden';
+      hidden.name = 'actividades';
+      hidden.value = input.value;
+      hiddenSelections.appendChild(hidden);
+    });
+  });
+
+  updateSummary();
+})();
+</script>
 
 </body>
-
 </html>

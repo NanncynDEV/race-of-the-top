@@ -780,3 +780,15 @@ nav.navbar,
         font-size: 3.2rem;
     }
 }
+/* =========================================
+    FOOTER - RACE OF THE TOP
+========================================= */
+
+footer.bg-dark,
+footer.container-fluid.bg-dark {
+    background-color: #37040f !important;
+}
+
+footer .bg-dark {
+    background-color: #37040f !important;
+}
