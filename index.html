@@ -9,121 +9,94 @@
 
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/app.css">
+  
 </head>
   <body>
 <header>
-  
-  
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top event-navbar" aria-label="Navegación principal">
+    <div class="container">
 
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-          <div class="container">
+      <a class="event-brand" href="#inicio" aria-label="Race of the Top 2026 - Inicio">
+        <span class="brand-mark">RT</span>
+        <span class="brand-copy">
+          <strong>Race of the Top</strong>
+          <small>Colima · 2026</small>
+        </span>
+      </a>
 
-              <a class="navbar-brand text-white" href="#inicio">
-                Race of the Top 2026
-                    </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menuPrincipal"
+        aria-controls="menuPrincipal"
+        aria-expanded="false"
+        aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-              <!-- Menú hamburguesa para dispositivos móviles -->
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#menuPrincipal"
-              aria-controls="menuPrincipal"
-              aria-expanded="false"
-              aria-label="Abrir menú">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#inicio" aria-current="page">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#evento">Evento</a></li>
+          <li class="nav-item"><a class="nav-link" href="#conferencias">Conferencias</a></li>
+          <li class="nav-item"><a class="nav-link" href="#talleres">Talleres</a></li>
+          <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+            <a class="btn btn-light nav-register" href="registro.html">Registro</a>
+          </li>
+        </ul>
+      </div>
 
-            <div class="collapse navbar-collapse" id="menuPrincipal">
-
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="#inicio">Inicio</a>
-                    </li>
-
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="#evento">Evento</a>
-                    </li>
-
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="#conferencias">Conferencias</a>
-                    </li>
-
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="#talleres">Talleres</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#premios">Premios</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#ponentes">Ponentes</a>
-                    </li>
-
-                  <li class="nav-item">
-                      <a class="nav-link text-white" href="#agenda">Agenda</a>
-                  </li>
-
-                  <li class="nav-item ms-lg-3">
-                      <a class="btn btn-outline-light" href="registro.html">Registro</a>
-                  </li>
-
-                </ul>
-            </div>
-          </div>
-    </nav>
+    </div>
+  </nav>
 </header>
-    
-      
-<section id="inicio" class="py-5 bg-light">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-9 text-center">
 
-        <p class="text-uppercase mb-2">
-          Evento de tecnología e innovación
+<main>
+<section id="inicio" class="hero-race event-hero">
+  <div class="container">
+    <div class="row align-items-center min-vh-75 g-5 py-5">
+
+      <div class="col-12 col-lg-7">
+        <p class="hero-kicker text-uppercase fw-semibold mb-3">
+          Tecnología · Innovación · Emprendimiento
         </p>
 
-        <h1 class="display-3 fw-bold">
-          RACE OF THE TOP
+        <h1 class="fw-bold mb-4">
+          Race of<br>the Top
         </h1>
 
-        <p class="lead mt-3">
-          Conferencias, talleres y reconocimiento
-          al talento tecnológico.
+        <p class="hero-intro mb-4">
+          Dos días para conectar ideas, talento y nuevas formas de transformar
+          el futuro a través de conferencias y experiencias prácticas.
         </p>
 
-        <p class="fw-semibold mt-4">
-          FECHA DEL EVENTO
-          <span class="mx-2">|</span>
-          SEDE DEL EVENTO
-        </p>
-
-        <div class="mt-4 d-flex gap-2 justify-content-center flex-wrap">
-
-          <a
-            href="registro.html"
-            class="btn btn-dark">
-            Regístrate
-          </a>
-
-          <a
-            href="#premios"
-            class="btn btn-outline-dark">
-            Conoce los premios
-          </a>
-
+        <div class="hero-info mb-4">
+          <p class="mb-1"><strong>22 y 23 de octubre de 2026</strong></p>
+          <p class="mb-0">Allegra, Centro de Convenciones</p>
         </div>
 
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="registro.html" class="btn btn-light btn-lg px-4">Regístrate</a>
+          <a href="#conferencias" class="btn btn-outline-light btn-lg px-4">Explora el programa</a>
+        </div>
       </div>
+
+      <div class="col-12 col-lg-5">
+        <div class="hero-visual">
+          <div class="hero-placeholder text-center d-flex flex-column align-items-center justify-content-center p-4">
+            <p class="fw-bold mb-2">IMAGEN OFICIAL DEL EVENTO</p>
+            <p class="mb-0">Espacio para composición principal, key visual o fotografía de campaña.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<main>
-<!-- =========================================     ACERCA DEL EVENTO          ========================================= -->
+<!-- =========================================
+     ACERCA DEL EVENTO
+========================================= -->
   <section id="evento" class="container py-5">
 
     <div class="row align-items-center g-4">
@@ -151,12 +124,6 @@
           en distintas ramas tecnológicas.
         </p>
 
-        <p>
-          El evento culmina con la premiación Race of the Top,
-          dedicada a reconocer proyectos, talento e iniciativas
-          destacadas dentro del ecosistema tecnológico.
-        </p>
-
       </div>
 
       <!-- Espacio para propuesta del diseñador -->
@@ -182,259 +149,323 @@
 
   </section>
 
-<!-- =========================================EXPERIENCIAS DEL EVENTo   ========================================= -->
-<section class="container py-5">
+<!-- =========================================
+     CONFERENCIAS
+========================================= -->
+<section id="conferencias" class="conference-section py-5">
+  <div class="container">
 
-      <div class="text-center mb-4">
-          <p class="text-uppercase mb-2">
-            Vive Race of the Top
-          </p>
+    <!-- GRAN CABECERA VISUAL DEL ÁREA -->
+    <div class="conference-hero">
+      <div class="conference-image-placeholder" aria-hidden="true">
+        RECURSO GRÁFICO / FOTOGRAFÍA PRINCIPAL DE CONFERENCIAS
+      </div>
 
-          <h2>
-            Conferencias y Talleres
-          </h2>
+      <div class="conference-hero-content">
+        <p class="conference-kicker text-uppercase fw-semibold mb-3">
+          Inspírate con grandes ideas
+        </p>
+        <h2 class="conference-title fw-bold mb-4">Conferencias</h2>
+        <p class="lead mb-0">
+          Dos días para descubrir ideas, experiencias y conversaciones sobre
+          tecnología, innovación y emprendimiento.
+        </p>
+      </div>
+    </div>
 
-          <p>
-              Espacios de aprendizaje, actualización y participación
-              alrededor de distintas áreas de la tecnología.
-          </p>
+    <!-- DÍA 1 -->
+    <section class="day-block" aria-labelledby="dia1-conferencias">
+      <div class="row align-items-end mb-4 g-3">
+        <div class="col-12 col-lg-8">
+          <span class="day-label mb-3">Día 1 · 22 de octubre</span>
+          <h3 id="dia1-conferencias" class="day-heading fw-bold mb-2">
+            Conferencias matutinas
+          </h3>
+          <p class="text-muted mb-0">09:00 – 14:00 h</p>
+        </div>
       </div>
 
       <div class="row g-4">
 
-          <!-- CONFERENCIAS -->
-          <article class="col-12 col-lg-6" id="conferencias">
+        <article class="col-12 col-md-6 col-lg-4">
+          <div class="speaker-tile">
+            <div class="speaker-media">
+              <img src="img/ponentes/oso-trava.png" alt="Oso Trava">
+            </div>
+            <div class="speaker-body">
+              <p class="speaker-type mb-2">Conferencista</p>
+              <h4 class="speaker-name fw-bold mb-0">Oso Trava</h4>
+              <a href="registro.html?actividad=oso-trava" class="speaker-cta">
+                <span>Quiero asistir</span><span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </article>
 
-              <div class="border rounded p-5 h-100">
+        <article class="col-12 col-md-6 col-lg-4">
+          <div class="speaker-tile">
+            <div class="speaker-media">
+              <img src="img/ponentes/nazareth-black.png" alt="Nazareth Black">
+            </div>
+            <div class="speaker-body">
+              <p class="speaker-type mb-2">Conferencista</p>
+              <h4 class="speaker-name fw-bold mb-0">Nazareth Black</h4>
+              <a href="registro.html?actividad=nazareth-black" class="speaker-cta">
+                <span>Quiero asistir</span><span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </article>
 
-                  <p class="text-uppercase">
-                      Conferencias
-                  </p>
+        <article class="col-12 col-md-6 col-lg-4">
+          <div class="speaker-tile">
+            <div class="speaker-media">
+              <img src="img/ponentes/david-davinci.png" alt="David DaVinci">
+            </div>
+            <div class="speaker-body">
+              <p class="speaker-type mb-2">Conferencista</p>
+              <h4 class="speaker-name fw-bold mb-0">David DaVinci</h4>
+              <a href="registro.html?actividad=david-davinci" class="speaker-cta">
+                <span>Quiero asistir</span><span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </article>
 
-                  <h3>
-                      Conocimiento que inspira
-                  </h3>
+      </div>
+    </section>
 
-                  <p>
-                    Charlas impartidas por especialistas, líderes y
-                    profesionales que compartirán experiencias, tendencias
-                    y perspectivas sobre el presente y futuro de la tecnología.
-                  </p>
+    <!-- DÍA 2 - MATUTINO -->
+    <section class="day-block" aria-labelledby="dia2-conferencias">
+      <div class="row align-items-end mb-4 g-3">
+        <div class="col-12 col-lg-8">
+          <span class="day-label mb-3">Día 2 · 23 de octubre</span>
+          <h3 id="dia2-conferencias" class="day-heading fw-bold mb-2">
+            Conferencias matutinas
+          </h3>
+          <p class="text-muted mb-0">09:00 – 14:00 h</p>
+        </div>
+      </div>
 
-                  <div class="border rounded p-4 text-center bg-light my-4">
-                        ESPACIO PARA RECURSO GRÁFICO DE CONFERENCIAS
-                  </div>
+      <div class="row g-4">
 
-                  <a href="#agenda" class="btn btn-outline-dark">
-                      Ver conferencias
-                  </a>
+        <article class="col-12 col-md-6 col-lg-4">
+          <div class="speaker-tile">
+            <div class="speaker-media">
+              <img src="img/ponentes/maria-amores.png" alt="María Amores">
+            </div>
+            <div class="speaker-body">
+              <p class="speaker-type mb-2">Conferencista</p>
+              <h4 class="speaker-name fw-bold mb-0">María Amores</h4>
+              <a href="registro.html?actividad=maria-amores" class="speaker-cta">
+                <span>Quiero asistir</span><span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="col-12 col-md-6 col-lg-4">
+          <div class="speaker-tile">
+            <div class="speaker-media">
+              <img src="img/ponentes/daniel-ordaz.png" alt="Daniel Ordaz">
+            </div>
+            <div class="speaker-body">
+              <p class="speaker-type mb-2">Conferencista</p>
+              <h4 class="speaker-name fw-bold mb-2">Daniel Ordaz</h4>
+              <p class="text-muted mb-0">Inteligencia Artificial</p>
+              <a href="registro.html?actividad=daniel-ordaz" class="speaker-cta">
+                <span>Quiero asistir</span><span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="col-12 col-md-6 col-lg-4">
+          <div class="speaker-tile">
+            <div class="speaker-media">
+              <img src="img/ponentes/altagracia-gomez.png" alt="Altagracia Gómez Sierra">
+            </div>
+            <div class="speaker-body">
+              <p class="speaker-type mb-2">Conversatorio</p>
+              <h4 class="speaker-name fw-bold mb-0">Altagracia Gómez Sierra</h4>
+              <a href="registro.html?actividad=altagracia-gomez" class="speaker-cta">
+                <span>Quiero asistir</span><span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- DÍA 2 - VESPERTINO DESTACADO -->
+    <section class="featured-session" aria-labelledby="vespertina-conferencias">
+      <div class="row align-items-center g-4">
+        <div class="col-12 col-lg-5">
+          <p class="speaker-type mb-2">Día 2 · 23 de octubre</p>
+          <h3 id="vespertina-conferencias" class="day-heading fw-bold mb-3">
+            Conferencia vespertina
+          </h3>
+          <p class="mb-1">17:00 – 19:00 h</p>
+          <p class="mb-0 text-white-50">
+            Una sesión especial para cerrar la jornada de conferencias.
+          </p>
+        </div>
+
+        <div class="col-12 col-lg-7">
+          <article class="speaker-tile">
+            <div class="row g-0 align-items-stretch">
+              <div class="col-12 col-md-5">
+                <div class="speaker-media h-100">
+                  <img src="img/ponentes/melissa-arria.png" alt="Melissa Arria">
+                </div>
               </div>
-
+              <div class="col-12 col-md-7">
+                <div class="speaker-body h-100 d-flex flex-column justify-content-center">
+                  <p class="speaker-type mb-2">Conferencista</p>
+                  <h4 class="speaker-name fw-bold mb-2">Melissa Arria</h4>
+                  <p class="text-muted mb-2">Marketing</p>
+                  <p class="small text-muted mb-0">17:00 – 19:00 h</p>
+                  <a href="registro.html?actividad=melissa-arria" class="speaker-cta">
+                    <span>Quiero asistir</span><span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </article>
-
-
-    <!-- TALLERES -->
-    <article class="col-12 col-lg-6" id="talleres">
-
-      <div class="border rounded p-5 h-100">
-
-        <p class="text-uppercase">
-          Talleres
-        </p>
-
-        <h3>
-          Aprende haciendo
-        </h3>
-
-        <p>
-          Sesiones prácticas diseñadas para desarrollar habilidades,
-          conocer herramientas y experimentar con soluciones
-          aplicadas a distintas ramas tecnológicas.
-        </p>
-
-        <div class="border rounded p-4 text-center bg-light my-4">
-          ESPACIO PARA RECURSO GRÁFICO DE TALLERES
         </div>
-
-        <a href="#agenda" class="btn btn-outline-dark">
-          Ver talleres
-        </a>
-
       </div>
-
-    </article>
+    </section>
 
   </div>
-
 </section>
 
-<!-- =========================================  PREMIOS RACE OF THE TOP  ========================================= -->
-<section id="premios" class="container py-5">
 
-  <div class="text-center mb-5">
+<!-- =========================================
+     TALLERES
+========================================= -->
 
-    <p class="text-uppercase mb-2">
-      Reconocimiento a la innovación
-    </p>
+<section id="talleres" class="workshop-section py-5">
+  <div class="container py-lg-4">
 
-    <h2>
-      Premios Race of the Top
-    </h2>
-
-    <p class="lead">
-      Reconocimientos dirigidos a proyectos, talento e iniciativas
-      destacadas en distintas áreas de la tecnología.
-    </p>
-
-  </div>
-
-
-
-  <div class="row g-4">
-
-    <!-- CATEGORÍA 1 -->
-    <article class="col-12 col-md-6 col-lg-4">
-
-      <div class="border rounded p-4 h-100">
-
-        <div class="border rounded p-5 text-center bg-light mb-4">
-          RECURSO GRÁFICO DE LA CATEGORÍA
-        </div>
-
-        <h3>
-          Desarrollo de Software
-        </h3>
-
-        <p>
-          Reconocimiento a proyectos, soluciones o desarrollos
-          tecnológicos destacados por su innovación, impacto
-          y calidad.
-        </p>
-
-          <!-- Enlace pendiente de definir -->
-        <button
-            type="button"
-            class="btn btn-outline-dark"
-            disabled>
-            Conocer categoría
-        </button>
+    <div class="workshop-hero">
+      <div class="workshop-image-placeholder">
+        RECURSO GRÁFICO / FOTOGRAFÍA DEL ÁREA
       </div>
 
-    </article>
-
-
-    <!-- CATEGORÍA 2 -->
-    <article class="col-12 col-md-6 col-lg-4">
-
-      <div class="border rounded p-4 h-100">
-
-        <div class="border rounded p-5 text-center bg-light mb-4">
-          RECURSO GRÁFICO DE LA CATEGORÍA
-        </div>
-
-        <h3>
-          Inteligencia Artificial
-        </h3>
-
-        <p>
-          Reconocimiento a proyectos o iniciativas que utilicen
-          inteligencia artificial para resolver problemas,
-          optimizar procesos o generar nuevas oportunidades.
+      <div class="workshop-hero-content">
+        <p class="workshop-kicker mb-3">Aprende haciendo</p>
+        <h2 class="workshop-title fw-bold mb-3">Talleres</h2>
+        <p class="lead mb-0">
+          Experiencias prácticas para desarrollar habilidades, experimentar con nuevas ideas
+          y llevar el conocimiento a la acción durante los dos días del evento.
         </p>
+      </div>
+    </div>
 
-        <button
-            type="button"
-            class="btn btn-outline-dark"
-            disabled>
-            Conocer categoría
-        </button>
-
+    <div class="workshop-block">
+      <div class="row align-items-end mb-4 g-3">
+        <div class="col-lg-8">
+          <span class="workshop-time">16:00 – 17:30 h</span>
+          <h3 class="workshop-heading fw-bold mb-2">Primer bloque</h3>
+          <p class="text-muted mb-0">Disponible el 22 y 23 de octubre.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <p class="text-muted mb-0">Elige el taller que mejor se ajuste a tus intereses.</p>
+        </div>
       </div>
 
-    </article>
+      <div class="row g-4">
+        <article class="col-12 col-md-6 col-lg-4">
+          <div class="workshop-card">
+            <div class="workshop-media"><img src="img/talleres/emprender-transformar.png" alt="Emprender para transformar"></div>
+            <div class="workshop-body">
+              <p class="workshop-type mb-2">Taller · 16:00 – 17:30</p>
+              <h4 class="workshop-name fw-bold">Emprender para transformar</h4>
+              <a href="registro.html?actividad=emprender-transformar" class="workshop-cta"><span>Quiero asistir</span><span>→</span></a>
+            </div>
+          </div>
+        </article>
 
+        <article class="col-12 col-md-6 col-lg-4">
+          <div class="workshop-card">
+            <div class="workshop-media"><img src="img/talleres/automatizacion-ia.png" alt="Automatización para negocios con IA"></div>
+            <div class="workshop-body">
+              <p class="workshop-type mb-2">Taller · 16:00 – 17:30</p>
+              <h4 class="workshop-name fw-bold">Automatización para negocios con IA</h4>
+              <a href="registro.html?actividad=automatizacion-ia" class="workshop-cta"><span>Quiero asistir</span><span>→</span></a>
+            </div>
+          </div>
+        </article>
 
-    <!-- CATEGORÍA 3 -->
-    <article class="col-12 col-md-6 col-lg-4">
+        <article class="col-12 col-md-6 col-lg-4">
+          <div class="workshop-card">
+            <div class="workshop-media"><img src="img/talleres/contabilidad-emprendedores.png" alt="Contabilidad para emprendedores tecnológicos"></div>
+            <div class="workshop-body">
+              <p class="workshop-type mb-2">Taller · 16:00 – 17:30</p>
+              <h4 class="workshop-name fw-bold">Contabilidad para emprendedores tecnológicos</h4>
+              <a href="registro.html?actividad=contabilidad-emprendedores" class="workshop-cta"><span>Quiero asistir</span><span>→</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
 
-      <div class="border rounded p-4 h-100">
-
-        <div class="border rounded p-5 text-center bg-light mb-4">
-          RECURSO GRÁFICO DE LA CATEGORÍA
+    <div class="workshop-block mb-0">
+      <div class="row align-items-end mb-4 g-3">
+        <div class="col-lg-8">
+          <span class="workshop-time">18:00 – 19:30 h</span>
+          <h3 class="workshop-heading fw-bold mb-2">Segundo bloque</h3>
+          <p class="text-muted mb-0">Disponible el 22 y 23 de octubre.</p>
         </div>
-
-        <h3>
-          Ciberseguridad
-        </h3>
-
-        <p>
-          Reconocimiento a iniciativas, soluciones o profesionales
-          que contribuyan a fortalecer la seguridad digital
-          y la protección de la información.
-        </p>
-
-        <button
-            type="button"
-            class="btn btn-outline-dark"
-            disabled>
-            Conocer categoría
-        </button>
-
+        <div class="col-lg-4 text-lg-end">
+          <p class="text-muted mb-0">Tres experiencias para cerrar la jornada con aprendizaje aplicado.</p>
+        </div>
       </div>
 
-    </article>
+      <div class="row g-4">
+        <article class="col-12 col-md-6 col-lg-4">
+          <div class="workshop-card">
+            <div class="workshop-media"><img src="img/talleres/cliente-futuro.png" alt="El cliente del futuro"></div>
+            <div class="workshop-body">
+              <p class="workshop-type mb-2">Taller · 18:00 – 19:30</p>
+              <h4 class="workshop-name fw-bold">El cliente del futuro</h4>
+              <a href="registro.html?actividad=cliente-futuro" class="workshop-cta"><span>Quiero asistir</span><span>→</span></a>
+            </div>
+          </div>
+        </article>
 
-  </div>
+        <article class="col-12 col-md-6 col-lg-4">
+          <div class="workshop-card">
+            <div class="workshop-media"><img src="img/talleres/food-hacking.png" alt="Food Hacking: la ciencia detrás de los alimentos"></div>
+            <div class="workshop-body">
+              <p class="workshop-type mb-2">Taller · 18:00 – 19:30</p>
+              <h4 class="workshop-name fw-bold">Food Hacking: la ciencia detrás de los alimentos</h4>
+              <a href="registro.html?actividad=food-hacking" class="workshop-cta"><span>Quiero asistir</span><span>→</span></a>
+            </div>
+          </div>
+        </article>
 
-</section>
-<section id="ponentes" class="py-5">
-  <div class="container text-center">
-
-    <p class="text-uppercase mb-2">
-      Conoce a los expertos
-    </p>
-
-    <h2>
-      Ponentes
-    </h2>
-
-    <p class="mb-4">
-      Próximamente conocerás a los especialistas
-      que formarán parte de Race of the Top 2026.
-    </p>
-
-    <div class="border rounded p-5 bg-light">
-      ESPACIO RESERVADO PARA PONENTES
+        <article class="col-12 col-md-6 col-lg-4">
+          <div class="workshop-card">
+            <div class="workshop-media"><img src="img/talleres/estrategias-digitales.png" alt="Estrategias digitales para negocios"></div>
+            <div class="workshop-body">
+              <p class="workshop-type mb-2">Taller · 18:00 – 19:30</p>
+              <h4 class="workshop-name fw-bold">Estrategias digitales para negocios</h4>
+              <a href="registro.html?actividad=estrategias-digitales" class="workshop-cta"><span>Quiero asistir</span><span>→</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
 
   </div>
 </section>
-<section id="agenda" class="py-5 bg-light">
-  <div class="container text-center">
 
-    <p class="text-uppercase mb-2">
-      Organiza tu participación
-    </p>
-
-    <h2>
-      Agenda
-    </h2>
-
-    <p class="mb-4">
-      Consulta próximamente el programa de
-      conferencias, talleres y actividades.
-    </p>
-
-    <div class="border rounded p-5 bg-white">
-      ESPACIO RESERVADO PARA AGENDA DEL EVENTO
-    </div>
-
-  </div>
-</section>
 <!-- =========================================
      LLAMADO A REGISTRO
 ========================================= -->
-<section class="py-5">
+<section id="registro" class="py-5">
   <div class="container text-center">
 
     <h2>Sé parte de Race of the Top 2026</h2>
@@ -451,14 +482,10 @@
 
   </div>
 </section>
-
-
-
-
 </main>
     
 <!-- =========================================    FOOTER - RACE OF THE TOP     ========================================= -->
-<footer class="container-fluid bg-secondary text-white pt-5">
+<footer class="container-fluid bg-dark text-white pt-5">
 
   <div class="container">
 
@@ -467,37 +494,13 @@
       <!-- SOBRE NOSOTROS -->
       <div class="col-12 col-md-4 text-center">
 
-        <h4>Sobre nosotros</h4>
+        <h3 class="h5">Sobre nosotros</h3>
 
         <ul class="list-unstyled">
 
           <li>
-            <a href="#evento" class="text-white">
+            <a href="#evento" class="text-white text-decoration-none">
               ¿Qué es Race of the Top?
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="text-white">
-              Misión
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="text-white">
-              Visión
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="text-white">
-              Organización
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="text-white">
-              Aviso de privacidad
             </a>
           </li>
 
@@ -509,42 +512,24 @@
       <!-- EXPLORA -->
       <div class="col-12 col-md-4 text-center">
 
-        <h4>Explora</h4>
+        <h3 class="h5">Explora</h3>
 
         <ul class="list-unstyled">
 
           <li>
-            <a href="#conferencias" class="text-white">
+            <a href="#conferencias" class="text-white text-decoration-none">
               Conferencias
             </a>
           </li>
 
           <li>
-            <a href="#talleres" class="text-white">
+            <a href="#talleres" class="text-white text-decoration-none">
               Talleres
             </a>
           </li>
 
           <li>
-            <a href="#premios" class="text-white">
-              Premios
-            </a>
-          </li>
-
-          <li>
-            <a href="#ponentes" class="text-white">
-              Ponentes
-            </a>
-          </li>
-
-          <li>
-            <a href="#agenda" class="text-white">
-              Agenda
-            </a>
-          </li>
-
-          <li>
-            <a href="registro.html" class="text-white">
+            <a href="registro.html" class="text-white text-decoration-none">
               Registro
             </a>
           </li>
@@ -557,7 +542,7 @@
       <!-- CONTACTO -->
       <div class="col-12 col-md-4 text-center">
 
-        <h4>Contacto</h4>
+        <h3 class="h5">Contacto</h3>
 
         <p class="mb-1">
           Correo institucional
@@ -593,7 +578,7 @@
 </footer>
   
     
-    <script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>
 
-    </body>
+</body>
 </html>
