@@ -40,6 +40,13 @@ app.get("/api/db-test", async (req, res) => {
   }
 });
 
+app.get("/api/test", (req, res) => {
+  res.json({
+    ok: true,
+    mensaje: "API Race To The Top funcionando"
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Race To The Top 2026 ejecutándose en puerto ${PORT}`);
 });
