@@ -7,7 +7,15 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(__dirname));
+
+// PRUEBA DE VERSIÓN
+app.get("/api/test", (req, res) => {
+  res.json({
+    ok: true,
+    mensaje: "API Race To The Top funcionando",
+    version: "2026-09-11-01"
+  });
+});
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -16,11 +24,6 @@ const pool = new Pool({
   }
 });
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
-});
-
-// Prueba de conexión con PostgreSQL
 app.get("/api/db-test", async (req, res) => {
   try {
     const result = await pool.query("SELECT NOW() AS fecha_servidor");
@@ -35,16 +38,17 @@ app.get("/api/db-test", async (req, res) => {
 
     res.status(500).json({
       ok: false,
-      mensaje: "No fue posible conectar con PostgreSQL"
+      mensaje: "No fue posible conectar con PostgreSQL",
+      error: error.message
     });
   }
 });
 
-app.get("/api/test", (req, res) => {
-  res.json({
-    ok: true,
-    mensaje: "API Race To The Top funcionando"
-  });
+// Los archivos estáticos después de las rutas API
+app.use(express.static(__dirname));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.listen(PORT, () => {
