@@ -504,6 +504,72 @@
     gap: 1.8rem;
   }
 }
+
+/* Recursos visuales de selección */
+.rtt-speaker-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: 1rem;
+}
+
+.rtt-speaker-mini {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #eee7e9;
+  background: var(--rtt-soft);
+  flex: 0 0 auto;
+}
+
+.rtt-speaker-mini img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.rtt-conf-card > input:checked + .rtt-conf-ui .rtt-speaker-mini {
+  border-color: rgba(255,255,255,.65);
+}
+
+.rtt-workshop-image {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--rtt-soft);
+  border-bottom: 1px solid var(--rtt-line);
+}
+
+.rtt-workshop-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.rtt-workshop-image--placeholder {
+  padding: 1rem;
+  color: var(--rtt-muted);
+  text-align: center;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .05rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767.98px) {
+  .rtt-speaker-mini {
+    width: 46px;
+    height: 46px;
+  }
+  .rtt-workshop-image {
+    height: 180px;
+  }
+}
 </style>
 </head>
 <body class="rtt-reg-page">
@@ -512,7 +578,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top event-navbar" aria-label="Navegación principal">
     <div class="container">
       <a class="event-brand" href="index.html#inicio">
-        <img src="Img/R4TW.png" alt="Race To The Top" style="height:44px;width:auto;object-fit:contain;">
+        <img src="img/R4TW.png" alt="Race To The Top" style="height:44px;width:auto;object-fit:contain;">
       </a>
 
       <button class="navbar-toggler" type="button"
@@ -547,7 +613,7 @@
         </div>
         <div class="col-lg-4">
           <div class="text-center mb-4">
-            <img src="Img/GRÁFICOS-16.png" alt="" style="max-height:260px;max-width:100%;width:auto;object-fit:contain;">
+            <img src="img/GRÁFICOS-16.png" alt="" style="max-height:260px;max-width:100%;width:auto;object-fit:contain;">
           </div>
           <div class="rtt-reg-event-meta">
             <span>22 y 23 de octubre de 2026</span>
@@ -584,6 +650,11 @@
                 <small>09:00 – 14:00 h</small>
                 <strong>Bloque de conferencias · Día 1</strong>
                 <em>Oso Trava · Nazareth Black · Daniel Ordaz</em>
+                <span class="rtt-speaker-strip" aria-label="Ponentes del bloque del 22 de octubre">
+                  <span class="rtt-speaker-mini"><img src="img/ponentes/oso-trava.png" alt="Oso Trava"></span>
+                  <span class="rtt-speaker-mini"><img src="img/ponentes/nazareth-black.png" alt="Nazareth Black"></span>
+                  <span class="rtt-speaker-mini"><img src="img/ponentes/daniel-ordaz.png" alt="Daniel Ordaz"></span>
+                </span>
               </span>
               <span class="rtt-conf-select"><i></i><b>Seleccionar bloque completo</b></span>
             </span>
@@ -598,6 +669,11 @@
                 <small>09:00 – 14:00 h</small>
                 <strong>Bloque de conferencias · Día 2</strong>
                 <em>Melissa Arria · Marketing · María Amores · Conversatorio con Altagracia Gómez Sierra</em>
+                <span class="rtt-speaker-strip" aria-label="Ponentes del bloque del 23 de octubre">
+                  <span class="rtt-speaker-mini"><img src="img/ponentes/melissa-arria.png" alt="Melissa Arria"></span>
+                  <span class="rtt-speaker-mini"><img src="img/ponentes/maria-amores.png" alt="María Amores"></span>
+                  <span class="rtt-speaker-mini"><img src="img/ponentes/altagracia-gomez7.png" alt="Altagracia Gómez Sierra"></span>
+                </span>
               </span>
               <span class="rtt-conf-select"><i></i><b>Seleccionar bloque completo</b></span>
             </span>
@@ -612,6 +688,9 @@
                 <small>17:00 – 19:00 h</small>
                 <strong>Conferencia especial</strong>
                 <em>Juan Lombana</em>
+                <span class="rtt-speaker-strip" aria-label="Conferencia especial">
+                  <span class="rtt-speaker-mini"><img src="img/ponentes/por-confirmar.png" alt="Imagen de ponente por confirmar"></span>
+                </span>
               </span>
               <span class="rtt-conf-select"><i></i><b>Seleccionar conferencia</b></span>
             </span>
@@ -641,6 +720,7 @@
           <div class="rtt-workshop-grid">
 
             <article class="rtt-workshop-card">
+              <div class="rtt-workshop-image rtt-workshop-image--placeholder">Imagen por confirmar</div>
               <div class="rtt-workshop-body">
                 <small>Taller 01</small>
                 <h4>Emprender para transformar</h4>
@@ -652,6 +732,7 @@
             </article>
 
             <article class="rtt-workshop-card">
+              <div class="rtt-workshop-image"><img src="img/talleres/automatizacion-negocios.png" alt="Automatización para negocios con IA"></div>
               <div class="rtt-workshop-body">
                 <small>Taller 02</small>
                 <h4>Automatización para negocios con IA</h4>
@@ -663,6 +744,7 @@
             </article>
 
             <article class="rtt-workshop-card">
+              <div class="rtt-workshop-image"><img src="img/talleres/contabilidad-emprendedores.png" alt="Contabilidad para emprendedores tecnológicos"></div>
               <div class="rtt-workshop-body">
                 <small>Taller 03</small>
                 <h4>Contabilidad para emprendedores tecnológicos</h4>
@@ -674,6 +756,7 @@
             </article>
 
             <article class="rtt-workshop-card">
+              <div class="rtt-workshop-image"><img src="img/talleres/neurogestion-emocional.png" alt="Neurogestión emocional en la era digital"></div>
               <div class="rtt-workshop-body">
                 <small>Taller 04 · Solo 22 OCT</small>
                 <h4>Neurogestión emocional en la era digital</h4>
@@ -696,6 +779,7 @@
           <div class="rtt-workshop-grid">
 
             <article class="rtt-workshop-card">
+              <div class="rtt-workshop-image"><img src="img/talleres/cliente-futuro.png" alt="El cliente del futuro"></div>
               <div class="rtt-workshop-body">
                 <small>Taller 05</small>
                 <h4>El cliente del futuro</h4>
@@ -707,6 +791,7 @@
             </article>
 
             <article class="rtt-workshop-card">
+              <div class="rtt-workshop-image"><img src="img/talleres/food-hacking.png" alt="Food Hacking: la ciencia detrás de los alimentos"></div>
               <div class="rtt-workshop-body">
                 <small>Taller 06</small>
                 <h4>Food Hacking: la ciencia detrás de los alimentos</h4>
@@ -718,6 +803,7 @@
             </article>
 
             <article class="rtt-workshop-card">
+              <div class="rtt-workshop-image"><img src="img/talleres/estrategias-digitales.png" alt="Estrategias digitales para negocios"></div>
               <div class="rtt-workshop-body">
                 <small>Taller 07</small>
                 <h4>Estrategias digitales para negocios</h4>
@@ -837,10 +923,10 @@
   <div class="container mt-4 pb-3">
     <div class="row g-4 align-items-center justify-content-center text-center">
       <div class="col-12 col-md-5">
-        <img src="Img/LOGO CECYTCOL.png" alt="CECYTCOL" style="max-height:68px;max-width:100%;width:auto;">
+        <img src="img/LOGO CECYTCOL.png" alt="CECYTCOL" style="max-height:68px;max-width:100%;width:auto;">
       </div>
       <div class="col-12 col-md-5">
-        <img src="Img/LOGO SEDECO.png" alt="Secretaría de Desarrollo Económico" style="max-height:76px;max-width:100%;width:auto;">
+        <img src="img/LOGO SEDECO.png" alt="Secretaría de Desarrollo Económico" style="max-height:76px;max-width:100%;width:auto;">
       </div>
     </div>
   </div>
